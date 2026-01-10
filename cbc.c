@@ -1,5 +1,6 @@
 #inlude<stdio.h>
 #include<stdint.h>
+#include<openssl/evap.h>
 #define BLOCK_SIZE 16
 void xor(node* block1,node* block2,char * result)
 {
