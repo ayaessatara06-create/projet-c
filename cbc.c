@@ -13,7 +13,7 @@ void encryption(node * head , const unsigned char* key, const unsigned char *iv)
 {
     EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
     node* current= head;
-    usigned char previous[16];
+    unsigned char previous[16];
     memcpy(previous,iv,16);
     EVP_EncryptInit_ex(ctx,EVP_aes_128_ecb(),NULL,key,NULL);
     EVP_CIPHER_CTX_set_padding(ctx, 0);
