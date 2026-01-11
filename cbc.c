@@ -1,7 +1,7 @@
 #include "cbc.h"
-#inlude<stdio.h>
+#include<stdio.h>
 #include<stdint.h>
-#include<openssl/evap.h>
+#include<openssl/evp.h>
 #define BLOCK_SIZE 16
 void xor(node* block1,node* block2,char * result)
 {
@@ -39,9 +39,9 @@ void decryption(node * head , const unsigned char* key, const unsigned char *iv)
     EVP_CIPHER_CTX_set_padding(ctx, 0);
     while(current!=NULL)
     {
-        mempcy(temp,current->data,16);
+        memcy(temp,current->data,16);
         int len;
-        EVP_decryptUpdate(ctx,current->data,&len,current->data,16);
+        EVP_DecryptUpdate(ctx,current->data,&len,current->data,16);
         xor(current->data,previous,current->data);
         memcpy(previous,temp,16);
         current=current->nxt;
