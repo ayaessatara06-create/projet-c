@@ -4,7 +4,7 @@
 #include<stdio.h>
 typedef struct node
 {
-    char data;
+    uint8_t data[16];
     struct node* nxt;
 }node;
 void list_to_file(char* filename,node* head);
