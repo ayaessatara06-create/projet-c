@@ -6,7 +6,7 @@
 
 
 // function to turn a list (liste chaine) into a file
-void liste_to_file(char* filename,node* head)
+void list_to_file(char* filename,node* head)
 {
     FILE* fp=fopen(filename,"wb");
     if(fp==NULL)
