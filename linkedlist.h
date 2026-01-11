@@ -1,9 +1,11 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<limits.h>
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
+#include<stdint.h>
 typedef struct node
 {
-    uint8_t data[16];
-    struct node*nxt;
+    unsigned char data[16];
+    struct node* nxt;
 }node;
-
+void display(node* head);
+node* createnode(unsigned char* data);
+#endif // LINKEDLIST_H
