@@ -1,15 +1,7 @@
-#include "linkedlist.h"
-#ifndef CBC_H 
+#ifndef CBC_H
 #define CBC_H
-#include<stdint.h>
-#include<stdio.h>
-#include<stdlib.h>
-#define BLOCK_SIZE 16
-typedef struct 
-{
-    uint8_t iv[BLOCK_SIZE];
-    uint8_t key[BLOCK_SIZE];
-    void (*encryption)(node * head , const unsigned char* key, const unsigned char *iv)
-    void (*decryption)(node * head , const unsigned char* key, const unsigned char *iv)
-}CBC;
-#endif
+#include "linkedlist.h"
+void xor(unsigned char* block1,unsigned char* block2, unsigned char* result);
+void encryption(node* head,const unsigned char* key,const unsigned char*iv);
+void decryption(node* head,const unsigned char* key,const unsigned char*iv);
+#endif // CBC_H
