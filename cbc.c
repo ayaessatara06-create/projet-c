@@ -11,7 +11,7 @@ void xor (unsigned char* block1, unsigned char* block2, unsigned char* result)
 {
     for(int i=0;i< BLOCK_SIZE ;i++)
     {
-        result[i]=block1[i] ^block2[i]; //appliquer le xor de chaque octect des deux block et stocker le resultat dans result
+        result[i]=block1[i] ^block2[i]; //appliquer le xor de chaque octect des deux block et stocker le résultat dans result
     }
 }
 
@@ -40,7 +40,7 @@ void encryption(node* head,const unsigned char* key,const unsigned char* iv)
 //function of decryption
 void decryption(node* head,const unsigned char* key,const unsigned char* iv)
 {
-    EVP_CIPHER_CTX* ctx=EVP_CIPHER_CTX_new(); //donner une structure de contexe a openssl qui va stocker les données de l'algoritme après déchiffrement
+    EVP_CIPHER_CTX* ctx=EVP_CIPHER_CTX_new(); //donner une structure de contexe à openssl qui va stocker les données de l'algoritme après déchiffrement
     node* current=head;
     unsigned char previous[16];
     unsigned char temp[16];
