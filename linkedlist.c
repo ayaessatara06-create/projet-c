@@ -48,7 +48,7 @@ node *display(node*head)
     {
         printf("%s\t",tmp->data);
         printf("\n");
-        tmp=tmp->data;
+        tmp=tmp->nxt;
     }
 }
 
