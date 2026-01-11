@@ -1,9 +1,12 @@
 #include "linkedlist.h"
 #include "fileio.h"
-#include <stdlib.h>
+#include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-void list_to_file(char* filename,node* head)
+
+
+// function to turn a list (liste chaine) into a file
+void liste_to_file(char* filename,node* head)
 {
     FILE* fp=fopen(filename,"wb");
     if(fp==NULL)
@@ -16,20 +19,23 @@ void list_to_file(char* filename,node* head)
     }
     fclose(fp);
 }
+// function to turn a file into a list (liste chaine)
 node* file_to_list(char* filename)
 {
     FILE* fp=fopen(filename,"rb");
-    if(fr==NULL)
+    if(fp==NULL)
         return NULL;
     node* head=NULL;
     node* tail=NULL;
-    uint8_t tmp[16];
+    unsigned char tmp[16];
     size_t n;
     while((n=fread(tmp,1,16,fp))>0)
     {
-        if(n<16) memset(tmp+n,0,16-n);
+        if(n<16)
+            memeset(tmp+n,0,16-n);
         node* maillon=(node*)malloc(sizeof(node));
-        if(maillon==NULL) break;
+        if(maillon==NULL)
+            break;
         memcpy(maillon->data,tmp,16);
         if(head==NULL)
         {
@@ -45,5 +51,3 @@ node* file_to_list(char* filename)
     fclose(fp);
     return head;
 }
-
-
