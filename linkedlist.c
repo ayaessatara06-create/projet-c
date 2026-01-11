@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<limits.h>
-node * createnode(int data)
+node * createnode(char data)
 {
     node*tmp=(node*)malloc(sizeof(node));
     tmp->data=data;
     tmp->nxt=NULL;
     return tmp;
 }
-node* addhead(node*head,int data)
+node* addhead(node*head,char data)
 {
     if(!head)
         return head=createnode(data);
@@ -17,7 +17,7 @@ node* addhead(node*head,int data)
     head=tmp;
     return tmp;
 }
-node *deletenode(node*head,int data)
+node *deletenode(node*head,char data)
 {
     if(!head)
         return head;
