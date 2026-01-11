@@ -29,8 +29,7 @@ int main() {
     decryption(ma_liste,key,iv);
     display(ma_liste);
     list_to_file(fichier_sortie, ma_liste);
-
-    printf("\nSucces ! Le fichier '%s' a ete cree.\n", fichier_sortie);
+    printf("le fichier %s est donné",fichier_sortie);
     return 0;
 }
 
