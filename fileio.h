@@ -1,5 +1,5 @@
 #include "linkedlist.h"
-#ifndef FILEIO_H
+#ifndef FILEIO_H //si le fichier n'est pas définie
 #define FILEIO_H
 #include<stdio.h>
 void list_to_file(char* filename,node* head); //recall of the function list_to_file
