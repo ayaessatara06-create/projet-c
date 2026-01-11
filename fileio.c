@@ -11,7 +11,7 @@ void list_to_file(char* filename,node* head)
     node*current=head;
     while(current!=NULL)
     {
-        fprintf(fr,"%s\n",current->data);
+        fwrite(current->data,1,16,fp);
         current=current->nxt;
     }
     fclose(fp);
@@ -23,12 +23,12 @@ node* file_to_list(char* filename)
         return NULL;
     node* head=NULL;
     node* tail=NULL;
-    char tmp[100];
-    while(fscanf(fp,"%99s",tmp)!=EOF)
+    uint8_t tmp[16];
+    while(fread(tmp,1,16,fp)!=EOF)
     {
         node* maillon=(node*)malloc(sizeof(node));
         if(maillon==NULL) break;
-        strcpy(maillon->data,tmp);
+        memcpy(maillon->data,tmp,16);
         if(head==NULL)
         {
             head=maillon;
