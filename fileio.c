@@ -25,7 +25,7 @@ node* file_to_list(char* filename)
     node* tail=NULL;
     uint8_t tmp[16];
     size_t n;
-    while(n=fread(tmp,1,16,fp)>0)
+    while((n=fread(tmp,1,16,fp))>0)
     {
         if(n<16) memset(tmp+n,0,16-n);
         node* maillon=(node*)malloc(sizeof(node));
