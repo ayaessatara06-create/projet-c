@@ -11,9 +11,9 @@ int main() {
     uint8_t iv[16]  = {0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48,
                        0x49, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56};
 
-    char *fichier_entree = "text.txt";
-    char *fichier_sortie = "test.enc";
-    node* liste = file_to_list("test.txt");
+    char *fichier_entree = "cbc.txt";
+    char *fichier_sortie = "cbc.enc";
+    node* liste = file_to_list("cbc.txt");
 
     if (liste == NULL) {
         printf("Erreur");
