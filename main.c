@@ -22,10 +22,10 @@ int main() {
 
     printf("le contenu avant chiffrement:\n");
     display(liste);
-    printf("apres chiffrement:\n");
+    printf("après chiffrement:\n");
     encryption(liste, key, iv);
     display(liste);
-    printf("apres dechiffrement:\n");
+    printf("après déchiffrement:\n");
     decryption(liste,key,iv);
     display(liste);
     list_to_file(fichier_sortie, ma_liste);
