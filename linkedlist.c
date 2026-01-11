@@ -5,11 +5,11 @@
 node * createnode(uint8_t *data)
 {
     node*tmp=(node*)malloc(sizeof(node));
-    memcpy(tmp->data, data_block, 16);
+    memcpy(tmp->data,data,16);
     tmp->nxt=NULL;
     return tmp;
 }
-node* addhead(node*head,uint8_t data)
+node* addhead(node*head,uint8_t *data)
 {
     if(!head)
         return head=createnode(data);
@@ -18,7 +18,7 @@ node* addhead(node*head,uint8_t data)
     head=tmp;
     return tmp;
 }
-node *deletenode(node*head,uint8_t data)
+node *deletenode(node*head,uint8_t *data)
 {
     if(!head)
         return head;
@@ -46,12 +46,9 @@ node *display(node*head)
     node*tmp=head;
     while(tmp)
     {
-        for(int i = 0; i < 16; i++) {
-            printf("%02x ", tmp->data[i]);
-        }
+        printf("%s\t",tmp->data);
         printf("\n");
-        tmp=tmp->nxt;
+        tmp=tmp->data;
     }
 }
-
 
