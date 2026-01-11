@@ -3,7 +3,7 @@
 #include<limits.h>
 typedef struct node
 {
-    int data;
+    char data;
     struct node*nxt;
 }node;
 
