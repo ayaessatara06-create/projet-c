@@ -13,10 +13,10 @@ int main() {
 
     char *fichier_entree = "text.txt";
     char *fichier_sortie = "test.enc";
-    node* ma_liste = file_to_list("test.txt");
+    node* liste = file_to_list("test.txt");
 
-    if (ma_liste == NULL) {
-        printf("Erreur : Impossible d'ouvrir %s ou fichier vide.\n", fichier_entree);
+    if (liste == NULL) {
+        printf("Erreur");
         return 1;
     }
 
