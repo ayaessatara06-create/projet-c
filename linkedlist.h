@@ -1,4 +1,4 @@
-#ifndef LINKEDLIST_H
+#ifndef LINKEDLIST_H //si le fichier n'est pas définie
 #define LINKEDLIST_H
 #include<stdint.h>
 typedef struct node
