@@ -32,7 +32,7 @@ node* file_to_list(char* filename)
     while((n=fread(tmp,1,16,fp))>0)
     {
         if(n<16)
-            memeset(tmp+n,0,16-n);
+            memset(tmp+n,0,16-n);
         node* maillon=(node*)malloc(sizeof(node));
         if(maillon==NULL)
             break;
