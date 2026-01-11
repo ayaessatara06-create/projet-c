@@ -2,10 +2,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<limits.h>
-node * createnode(char data)
+node * createnode(uint8_t *data)
 {
     node*tmp=(node*)malloc(sizeof(node));
-    tmp->data=data;
+    memcpy(tmp->data, data_block, 16);
     tmp->nxt=NULL;
     return tmp;
 }
@@ -46,8 +46,11 @@ node *display(node*head)
     node*tmp=head;
     while(tmp)
     {
-        printf("%d\t",tmp->data);
-        tmp=tmp->data;
+        for(int i = 0; i < 16; i++) {
+            printf("%02x ", tmp->data[i]);
+        }
+        printf("\n");
+        tmp=tmp->nxt;
     }
 }
 
