@@ -9,7 +9,7 @@ node * createnode(uint8_t *data)
     tmp->nxt=NULL;
     return tmp;
 }
-node* addhead(node*head,char data)
+node* addhead(node*head,uint8_t data)
 {
     if(!head)
         return head=createnode(data);
@@ -18,7 +18,7 @@ node* addhead(node*head,char data)
     head=tmp;
     return tmp;
 }
-node *deletenode(node*head,char data)
+node *deletenode(node*head,uint8_t data)
 {
     if(!head)
         return head;
