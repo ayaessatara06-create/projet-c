@@ -40,7 +40,7 @@ void encryption(node* head,const unsigned char* key,const unsigned char* iv)
 //function of decryption
 void decryption(node* head,const unsigned char* key,const unsigned char* iv)
 {
-    EVP_CIPHER_CTX* ctx=EVP_CIPHER_CTX_new(); //donner une structure de contexe a openssl qui va stocker les données de l'algoritme après chiffrement
+    EVP_CIPHER_CTX* ctx=EVP_CIPHER_CTX_new(); //donner une structure de contexe a openssl qui va stocker les données de l'algoritme après déchiffrement
     node* current=head;
     unsigned char previous[16];
     unsigned char temp[16];
