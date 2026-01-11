@@ -12,4 +12,4 @@ typedef struct
     void (*encryption)(node * head , const unsigned char* key, const unsigned char *iv)
     void (*decryption)(node * head , const unsigned char* key, const unsigned char *iv)
 }CBC;
-#endif;
+#endif
