@@ -5,7 +5,7 @@
 #include<string.h>
 void list_to_file(char* filename,node* head)
 {
-    FILE* fp=fopen(filename,"w");
+    FILE* fp=fopen(filename,"wb");
     if(fp==NULL)
         return;
     node*current=head;
@@ -18,7 +18,7 @@ void list_to_file(char* filename,node* head)
 }
 node* file_to_list(char* filename)
 {
-    FILE* fp=fopen(filename,"r");
+    FILE* fp=fopen(filename,"rb");
     if(fr==NULL)
         return NULL;
     node* head=NULL;
