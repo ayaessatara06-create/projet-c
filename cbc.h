@@ -1,3 +1,4 @@
+#include "linkedlist.h"
 #ifndef CBC_H
 #define CBC_H
 #include<stdint.h>
