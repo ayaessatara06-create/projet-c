@@ -21,13 +21,13 @@ int main() {
     }
 
     printf("le contenu avant chiffrement:\n");
-    display(ma_liste);
+    display(liste);
     printf("apres chiffrement:\n");
-    encryption(ma_liste, key, iv);
-    display(ma_liste);
+    encryption(liste, key, iv);
+    display(liste);
     printf("apres dechiffrement:\n");
-    decryption(ma_liste,key,iv);
-    display(ma_liste);
+    decryption(liste,key,iv);
+    display(liste);
     list_to_file(fichier_sortie, ma_liste);
     printf("le fichier %s est donné",fichier_sortie);
     return 0;
