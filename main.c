@@ -29,7 +29,7 @@ int main(int argc,char*argv[])
     printf("après déchiffrement:\n");
     decryption(liste,key,iv);
     display(liste);
-    list_to_file(fichier_sortie, ma_liste);
+    list_to_file(fichier_sortie, liste);
     printf("le fichier %s est donné",fichier_sortie);
     return 0;
 }
